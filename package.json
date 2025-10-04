@@ -1,0 +1,20 @@
+{
+  "name": "mon_portofolio",
+  "version": "1.0.0",
+  "description": "My personal portofolio website built using HTML, Tailwindcss and javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinBissouth/Mon_portofolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinBissouth/Mon_portofolio/issues"
+  },
+  "homepage": "https://github.com/kevinBissouth/Mon_portofolio#readme"
+}

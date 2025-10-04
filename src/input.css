@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(/./font/Poppins-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Londrina Outline';
+    src: url(/./font/LondrinaOutline-Regular.ttf) format('truetype');
+}
+
+
+
+:root{
+    --bodyColor: hsl(216, 100%, 4%);
+    --primaryColor: hsl(209, 87%, 21%);
+    --primaryColorLight: hsl(209, 74%, 45%);
+    --whiteColor: #fff;
+}
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+
+    body {
+        @apply text-[var(--primaryColor)] font-[Poppins] bg-[var(--bodyColor)] tracking-wider overflow-x-hidden;
+    }
+    
+    .container {
+        @apply p-[10px] md:p-[30px] 
+    }
+}
