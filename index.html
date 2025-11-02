@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/output.css">
+    <script src="src/main.js" async></script>
+    <script src="https://unpkg.com/scrollreveal" async></script>
     <link rel="icon" href="images/kblogo2.png">
     <title>K~B-Portofolio</title>
 </head>
 <body>
-    <header id="navbar" class="">
-        <nav class="">
-            <div class="">
-                <img src="images/kblogo1.png" alt="logo" id="logo" class="w-10 md:w-14">
+    <header id="navbar" class="sticky top-0 z-50 duration-300">
+        <nav class="relative container flex justify-between items-center">
+            <div class="py-5">
+                <img src="images/kblogo1.png" alt="logo" id="logo" class="w-14 md:w-25">
             </div>
 
-            <div id="nav-menu" class="">
-                <ul class="">
+            <div id="nav-menu" class="hidden absolute top-0 left-0 bg-[var(--primaryColor)] w-full py-24 lg:block lg:bg-transparent lg:static lg:py-0 
+                lg:border-none lg:w-auto lg:ml-auto">
+                <ul class="flex flex-col items-center text-center gap-8 lg:flex-row lg:gap-5">
                     <li>
                         <a href="#quality_services" class="nav-link">Services</a>
                     </li>
@@ -32,24 +35,662 @@
                         <a href="#contact" class="nav-link">Contact</a>
                     </li>
                     <li>
-                        <button class="btn">
+                        <button class="btn ml-10">
                             <span class="z-10">Hire Me!</span>
                         </button>
                     </li>
                 </ul>
                
-                <div id="nav-close" class="">
+                <div id="nav-close" class="absolute top-8 right-4 md:right-8 text-[var(--whiteColor)] text-3xl cursor-pointer lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1.875rem" height="1.875rem" fill="currentColor">
                         <path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 
                         18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path></svg>
                 </div>
-
             </div>
-            <div id="hamburger" class="">
+            <div id="hamburger" class="gap-5 cursor-pointer ml-4 text-2xl lg:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1.5rem" height="1.5rem" 
-                fill="currentColor"><path d="M3 4H21V6H3V4ZM3 11H15V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
+                    fill="currentColor"><path d="M3 4H21V6H3V4ZM3 11H15V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
             </div>
         </nav>
     </header>
+
+    <main>
+        <!-- persone section -->
+        <section id="hero" class="relative py-5">
+            <div class="absolute right-0 top-[-20%] w-80 h-80 bg-[var(--primaryColorLight)] mix-blend-screen rounded-full blur-[150px]
+                opacity-50"></div>
+
+            <div class="container">
+                <!-- bg-image -->
+                <div class="hidden md:block absolute top-0 left-[30%] animate-scaleAnimation lg:left-[35%]">
+                    <p class="font-[Londrina Outline] text-[400px] text-[var(--primaryColorLight)] uppercase -z-10 opacity-5 lg:text-[450px]">hi</p>
+                </div>
+                <!-- persone content -->
+                <div class="flex items-center gap-5">
+                    <div class=" hero__content space-y-2 md:w-2/3">
+                        <h3 class="text-2xl font-bold md:text-3xl lg:text-4xl">I am Kevin Bissouth</h3>
+                        <h1>
+                            <span class="title">web Developer +</span>
+                            <br>
+                            <span class="title">UX Designer</span>
+                        </h1>
+                        <div class="relative md:hidden w-full ">
+                            <div class="absolute left-0 bottom-0 w-80 h-80 bg-[var(--primaryColorLight)] mix-blend-screen rounded-full blur-[150px] opacity-50"></div>
+                            <img src="./images/john1.jpg" alt="personne" class="my-10 max-w-[90%] duration-300 origin-center rotate-[4.5deg] border-2
+                            border-[var(--primaryColor)] justify-self-center rounded-[38px] hover:rotate-0 hover:border-[var(--primaryColorLight)] h-[350px] w-[60%]">
+                        </div>  
+                            <p class="max-w-xl text-xl pb-5">
+                                Experienced and passionate web developer, i create innovative and effective web solution. 
+                                Explore my portofolio to discover my achievement.
+                            </p>
+                            <div class="flex items-center flex-wrap gap-5 max-sm:block  ">
+                                <button class="btn_outline flex items-center gap-5">
+                                    Download CV 
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path d="M3 19H21V21H3V19ZM13 13.1716L19.0711 7.1005L20.4853 8.51472L12 17L3.51472 8.51472L4.92893 7.1005L11 13.1716V2H13V13.1716Z"></path></svg>
+                                </button>
+                                <div class="flex items-center gap-5 max-sm:mt-[10px] max-sm:ml-[5px]">
+                                    <div class=" social-icon">
+                                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="z-10">
+                                        <path d="M22.2125 5.65605C21.4491 5.99375 20.6395 6.21555 19.8106 6.31411C20.6839 5.79132 21.3374 4.9689 21.6493 4.00005C20.8287 4.48761 
+                                        19.9305 4.83077 18.9938 5.01461C18.2031 4.17106 17.098 3.69303 15.9418 3.69434C13.6326 3.69434 11.7597 5.56661 11.7597
+                                         7.87683C11.7597 8.20458 11.7973 8.52242 11.8676 8.82909C8.39047 8.65404 5.31007 6.99005 3.24678 4.45941C2.87529 5.09767 
+                                         2.68005 5.82318 2.68104 6.56167C2.68104 8.01259 3.4196 9.29324 4.54149 10.043C3.87737 
+                                         10.022 3.22788 9.84264 2.64718 9.51973C2.64654 9.5373 2.64654 9.55487 2.64654 9.57148C2.64654 11.5984 4.08819 13.2892 6.00199 13.6731C5.6428 13.7703 5.27232 13.8194 
+                                         4.90022 13.8191C4.62997 13.8191 4.36771 13.7942 4.11279 13.7453C4.64531 15.4065 6.18886 16.6159 8.0196 16.6491C6.53813 17.8118 
+                                         4.70869 18.4426 2.82543 18.4399C2.49212 18.4402 2.15909 18.4205 1.82812 18.3811C3.74004 19.6102 5.96552 20.2625 8.23842 20.2601C15.9316 20.2601 20.138 13.8875 20.138 8.36111C20.138 8.1803 20.1336 7.99886 20.1256 7.81997C20.9443 7.22845 21.651 6.49567 22.2125 5.65605Z"></path></svg>
+                                    </div>
+                                    <div class=" social-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="z-10">
+                                            <path d="M6.94048 4.99993C6.94011 5.81424 6.44608 6.54702 5.69134 6.85273C4.9366 7.15845 4.07187 6.97605 3.5049 6.39155C2.93793 5.80704 2.78195 4.93715 3.1105
+                                             4.19207C3.43906 3.44699 4.18654 2.9755 5.00048 2.99993C6.08155 3.03238 6.94097 3.91837 6.94048 4.99993ZM7.00048 8.47993H3.00048V20.9999H7.00048V8.47993ZM13.3205 
+                                             8.47993H9.34048V20.9999H13.2805V14.4299C13.2805 10.7699 18.0505 10.4299 18.0505 
+                                            14.4299V20.9999H22.0005V13.0699C22.0005 6.89993 14.9405 7.12993 13.2805 10.1599L13.3205 8.47993Z"></path></svg>
+                                    </div>
+                                    <div class=" social-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="z-10">
+                                            <path d="M12.2439 4C12.778 4.00294 14.1143 4.01586 15.5341 4.07273L16.0375 4.09468C17.467 4.16236 18.8953 4.27798 19.6037 4.4755C20.5486 4.74095 21.2913 5.5155
+                                             21.5423 6.49732C21.942 8.05641 21.992 11.0994 21.9982 11.8358L21.9991 11.9884L21.9991 11.9991C21.9991 11.9991 21.9991 12.0028 21.9991 12.0099L21.9982 12.1625C21.992
+                                              12.8989 21.942 15.9419 21.5423 17.501C21.2878 18.4864 20.5451 19.261 19.6037 19.5228C18.8953 19.7203 17.467 19.8359 16.0375 19.9036L15.5341 19.9255C14.1143 
+                                              19.9824 12.778 19.9953 12.2439 19.9983L12.0095 19.9991L11.9991 19.9991C11.9991 19.9991 11.9956 19.9991 11.9887 19.9991L11.7545 19.9983C10.6241 19.9921 
+                                              5.89772 19.941 4.39451 19.5228C3.4496 19.2573 2.70692 18.4828 2.45587 17.501C2.0562 15.9419 2.00624 12.8989 2 12.1625V11.8358C2.00624 11.0994 
+                                              2.0562 8.05641 2.45587 6.49732C2.7104 5.51186 3.45308 
+                                            4.73732 4.39451 4.4755C5.89772 4.05723 10.6241 4.00622 11.7545 4H12.2439ZM9.99911 8.49914V15.4991L15.9991 11.9991L9.99911 8.49914Z"></path></svg>
+                                    </div>
+                                    <div class=" social-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="z-10">
+                                            <path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598
+                                             21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375
+                                              4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 
+                                              17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 
+                                              8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 
+                                              14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 
+                                              10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 
+                                            14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- persone image -->
+                        <div class=" hero__image relative hidden md:w-1/3 md:flex justify-center">
+                            <div class="absolute left-0 bottom-0 w-80 h-80 bg-[var(--primaryColorLight)] mix-blend-screen rounded-full blur-[150px] opacity-50"></div>
+                            <img src="./images/john1.jpg" alt="personne" class="my-10 md:w-[70%] lg:max-[60%] max-w-[90%] duration-300 origin-center rotate-[4.5deg] border-2
+                            border-[var(--primaryColor)] rounded-[38px] hover:rotate-0 hover:border-[var(--primaryColorLight)] h-[350px]">
+                        </div>   
+                    </div>
+                <!-- person footer -->
+                 <div class="hero__footer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-10">
+                    <div class="flex items-center gap-3">
+                        <p class="text-5xl font-extrabold lg:text-6xl">1</p>
+                        <p>
+                            Year of <br> Experience
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <p class="text-5xl font-extrabold lg:text-6xl">3+</p>
+                        <p>
+                            Project <br> Completed
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <p class="text-5xl font-extrabold lg:text-6xl">2+</p>
+                        <p>
+                            Happy <br> Clients
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <p class="text-5xl font-extrabold lg:text-6xl">1</p>
+                        <p>
+                            Year of <br> Experience
+                        </p>
+                    </div>
+                 </div>
+            </div>
+            
+        </section>
+
+        <!-- My quality services -->
+        <section id="quality_services" class="bg-[var(--darkSectionColor)] min-[580px]:max-[660px]:w-[100%]">
+            <div class="container">
+                <div class="flex flex-col items-center gap-5 text-center">
+                    <h2 class="suservice__top subtitle">My Quality Services</h2>
+                <p class="max-w-2xl">
+                    we transforme your ideas and desires into a distinctive web project that inspire botth you and your customers.
+                </p>
+            </div>
+            
+            <!-- list section -->
+             <div class="my-10">
+                <!-- items 1 -->
+                <div class="service__item">
+                    <div class="flex justify-between pb-3">
+                        <div class="text-xl font-bold flex items-center gap-3">
+                            <p class="text-[var(--primaryColorLight)] hover:text-[var(--whiteColor)]">01</p>
+                            <p>hello</p>
+                        </div>
+                        <div class="ml-auto text-2xl origin-center rotate-45">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                            <path d="m547.69-267.69-28.31-28.77L682.92-460H200v-40h482.92L519.38-663.54l28.31-28.77L760-480 547.69-267.69Z"/></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="pl-8 pb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consectetur similique numquam? 
+                            Harum vel voluptas ex sed blanditiis ratione aut libero cumque consequuntur tempore hic ea, quo quaerat minus. Adipisci?</p>
+                    </div>
+                </div>
+                <!-- item 2 -->
+                 <div class="service__item">
+                    <div class="flex justify-between pb-3">
+                        <div class="text-xl font-bold flex items-center gap-3">
+                            <p class="text-[var(--primaryColorLight)] hover:text-[var(--whiteColor)]">02</p>
+                            <p>hello</p>
+                        </div>
+                        <div class="ml-auto text-2xl origin-center rotate-45">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                            <path d="m547.69-267.69-28.31-28.77L682.92-460H200v-40h482.92L519.38-663.54l28.31-28.77L760-480 547.69-267.69Z"/></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="pl-8 pb-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi porro nostrum asperiores, 
+                            sed quia, commodi fuga quo debitis excepturi suscipit ea praesentium similique quibusdam voluptatibus beatae a ipsam esse ut.</p>
+                    </div>
+                </div>
+                <!-- item 3 -->
+                 <div class="service__item">
+                    <div class="flex justify-between pb-3">
+                        <div class="text-xl font-bold flex items-center gap-3">
+                            <p class="text-[var(--primaryColorLight)] hover:text-[var(--whiteColor)]">03</p>
+                            <p>hello</p>
+                        </div>
+                        <div class="ml-auto text-2xl origin-center rotate-45">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                            <path d="m547.69-267.69-28.31-28.77L682.92-460H200v-40h482.92L519.38-663.54l28.31-28.77L760-480 547.69-267.69Z"/></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="pl-8 pb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem officiis, reiciendis ratione 
+                            placeat iure ipsum error eligendi incidunt consequuntur omnis tenetur hic, facere, architecto ducimus quae a id temporibus.</p>
+                    </div>
+                </div>
+                <!-- item 4 -->
+                 <div class="service__item">
+                    <div class="flex justify-between pb-3">
+                        <div class="text-xl font-bold flex items-center gap-3">
+                            <p class="text-[var(--primaryColorLight)] hover:text-[var(--whiteColor)]">04</p>
+                            <p>hello</p>
+                        </div>
+                        <div class="ml-auto text-2xl origin-center rotate-45">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                            <path d="m547.69-267.69-28.31-28.77L682.92-460H200v-40h482.92L519.38-663.54l28.31-28.77L760-480 547.69-267.69Z"/></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="pl-8 pb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae dolorum fugiat fugit illum 
+                            pariatur repellat, nostrum magnam esse, perferendis maiores quas nihil explicabo commodi possimus atque error, eveniet accusamus.</p>
+                    </div>
+                </div>
+                <!-- item 5 -->
+                    <div class="service__item">
+                    <div class="flex justify-between pb-3">
+                        <div class="text-xl font-bold flex items-center gap-3">
+                            <p class="text-[var(--primaryColorLight)] hover:text-[var(--whiteColor)]">05</p>
+                            <p>hello</p>
+                        </div>
+                        <div class="ml-auto text-2xl origin-center rotate-45">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                            <path d="m547.69-267.69-28.31-28.77L682.92-460H200v-40h482.92L519.38-663.54l28.31-28.77L760-480 547.69-267.69Z"/></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="pl-8 pb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum a excepturi magni veritatis 
+                            ipsam ea velit corporis provident laudantium doloribus error blanditiis, vel voluptate sed expedita est in libero rem.</p>
+                    </div>
+                </div>
+             </div>
+            </div>
+            
+        </section>
+        <!-- my recent work -->
+         <section id="recent_works" class="container">
+            <div class="flex flex-col items-center gap-5 text-center">
+                    <h2 class="subtitle">My Recent works</h2>
+                <p class="max-w-2xl">
+                    we transforme your ideas and desires into a distinctive web project that inspire botth you and your customers.
+                </p>
+            </div>
+            <div class="relative w-max mx-auto my-10 h-10 text-xs grid grid-cols-4 items-center px-[3px] rounded-full bg-[var(--darkSectionColor)] border 
+            border-[var(--primaryColor)] overflow-hidden transition md:h-12 md:text-base">
+                <!-- indicator -->
+                 <div class="indicator absolute h-9 my-auto top-0 bottom-0 left-0 rounded-full bg-[var(--primaryColorLight)] md:h-11"></div>
+
+                 <button class="tab relative block h-8 px-3 rounded-full text-[var(--whiteColor)] md:h-10 md:px-6" data-tab="all">All</button>
+                 <button class="tab relative block h-8 px-3 rounded-full md:h-10 md:px-6" data-tab="ui">UI</button>
+                 <button class="tab relative block h-8 px-3 rounded-full md:h-10 md:px-6" data-tab="branding">Branding</button>
+                 <button class="tab relative block h-8 px-3 rounded-full md:h-10 md:px-6" data-tab="app">Apps</button>
+            </div>
+            <div class="mt-6 relative rounded-3xl">
+            <!-- blod  -->
+             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-80 bg-[var(--primaryColorLight)] mix-blend-screen rounded-full
+             blur-[150px] opacity-50"></div>
+             <ul class="grid grid-cols-2 gap-5 lg:gap-10 md:grid-cols-3">
+                <!-- ui -->
+                <li class="work_card ui relative bg-[var(--darkSectionColor)] p-5 rounded-2xl border border-transparent hover:border-[var(--primaryColor)] duration-300 
+                overflow-hidden lg:p-8">
+                    <img src="./images/kblogo.jpg" alt="recent work" class="w-full">
+                    <div class="absolute left-0 right-0 bottom-[-100%] p-5 lg:p-8">
+                        <div class="flex items-center justify-between bg-gradient-to-r from-[var(--primaryColorLight)] to-[var(--primaryColor)] text-[var(--whiteColor)]
+                        p-5 rounded-t-2xl">
+                        <div>
+                            <p class="text-2xl font-bold lg:text-3xl ">Design</p>
+                            <p>I analyse intricate user experience</p>
+                        </div>
+                        <div class="rotate-45 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#fff">
+                            <path d="m547.69-267.69-28.31-28.77L682.92-460H200v-40h482.92L519.38-663.54l28.31-28.77L760-480 547.69-267.69Z"/></svg>
+                        </div>
+                        </div>
+                    </div>
+                </li>
+                
+                 <li class="work_card ui relative bg-[var(--darkSectionColor)] p-5 rounded-2xl border border-transparent hover:border-[var(--primaryColor)] duration-300 
+                overflow-hidden lg:p-8">
+                    <img src="./images/ui-1.png" alt="recent work" class="w-full">
+                    <div class="absolute left-0 right-0 bottom-[-100%] p-5 lg:p-8">
+                        <div class="flex items-center justify-between bg-gradient-to-r from-[var(--primaryColorLight)] to-[var(--primaryColor)] text-[var(--whiteColor)]
+                        p-5 rounded-t-2xl">
+                        <div>
+                            <p class="text-2xl font-bold lg:text-3xl ">Design</p>
+                            <p>I analyse intricate user experience</p>
+                        </div>
+                        <div class="rotate-45 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#fff">
+                            <path d="m547.69-267.69-28.31-28.77L682.92-460H200v-40h482.92L519.38-663.54l28.31-28.77L760-480 547.69-267.69Z"/></svg>
+                        </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- branding -->
+                 <li class="work_card branding relative bg-[var(--darkSectionColor)] p-5 rounded-2xl border border-transparent hover:border-[var(--primaryColor)] duration-300 
+                overflow-hidden lg:p-8">
+                    <img src="./images/kblogo.jpg" alt="recent work" class="w-full">
+                    <div class="absolute left-0 right-0 bottom-[-100%] p-5 lg:p-8">
+                        <div class="flex items-center justify-between bg-gradient-to-r from-[var(--primaryColorLight)] to-[var(--primaryColor)] text-[var(--whiteColor)]
+                        p-5 rounded-t-2xl">
+                        <div>
+                            <p class="text-2xl font-bold lg:text-3xl ">Design</p>
+                            <p>I analyse intricate user experience</p>
+                        </div>
+                        <div class="rotate-45 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#fff">
+                            <path d="m547.69-267.69-28.31-28.77L682.92-460H200v-40h482.92L519.38-663.54l28.31-28.77L760-480 547.69-267.69Z"/></svg>
+                        </div>
+                        </div>
+                    </div>
+                </li>
+
+                 <li class="work_card branding relative bg-[var(--darkSectionColor)] p-5 rounded-2xl border border-transparent hover:border-[var(--primaryColor)] duration-300 
+                overflow-hidden lg:p-8">
+                    <img src="./images/kblogo.jpg" alt="recent work" class="w-full">
+                    <div class="absolute left-0 right-0 bottom-[-100%] p-5 lg:p-8">
+                        <div class="flex items-center justify-between bg-gradient-to-r from-[var(--primaryColorLight)] to-[var(--primaryColor)] text-[var(--whiteColor)]
+                        p-5 rounded-t-2xl">
+                        <div>
+                            <p class="text-2xl font-bold lg:text-3xl ">Design</p>
+                            <p>I analyse intricate user experience</p>
+                        </div>
+                        <div class="rotate-45 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#fff">
+                            <path d="m547.69-267.69-28.31-28.77L682.92-460H200v-40h482.92L519.38-663.54l28.31-28.77L760-480 547.69-267.69Z"/></svg>
+                        </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- app  -->
+                <li class="work_card app relative bg-[var(--darkSectionColor)] p-5 rounded-2xl border border-transparent hover:border-[var(--primaryColor)] duration-300 
+                overflow-hidden lg:p-8">
+                    <img src="./images/app-1.png" alt="recent work" class="w-full">
+                    <div class="absolute left-0 right-0 bottom-[-100%] p-5 lg:p-8">
+                        <div class="flex items-center justify-between bg-gradient-to-r from-[var(--primaryColorLight)] to-[var(--primaryColor)] text-[var(--whiteColor)]
+                        p-5 rounded-t-2xl">
+                        <div>
+                            <p class="text-2xl font-bold lg:text-3xl ">Design</p>
+                            <p>I analyse intricate user experience</p>
+                        </div>
+                        <div class="rotate-45 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#fff">
+                            <path d="m547.69-267.69-28.31-28.77L682.92-460H200v-40h482.92L519.38-663.54l28.31-28.77L760-480 547.69-267.69Z"/></svg>
+                        </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="work_card app relative bg-[var(--darkSectionColor)] p-5 rounded-2xl border border-transparent hover:border-[var(--primaryColor)] duration-300 
+                overflow-hidden lg:p-8">
+                    <img src="./images/app-2.png" alt="recent work" class="w-full">
+                    <div class="absolute left-0 right-0 bottom-[-100%] p-5 lg:p-8">
+                        <div class="flex items-center justify-between bg-gradient-to-r from-[var(--primaryColorLight)] to-[var(--primaryColor)] text-[var(--whiteColor)]
+                        p-5 rounded-t-2xl">
+                        <div>
+                            <p class="text-2xl font-bold lg:text-3xl ">Design</p>
+                            <p>I analyse intricate user experience</p>
+                        </div>
+                        <div class="rotate-45 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#fff">
+                            <path d="m547.69-267.69-28.31-28.77L682.92-460H200v-40h482.92L519.38-663.54l28.31-28.77L760-480 547.69-267.69Z"/></svg>
+                        </div>
+                        </div>
+                    </div>
+                </li>
+             </ul>
+            </div>
+         </section>
+         <!-- experience and education -->
+          <section id="exp_edu" class="bg-[var(--darkSectionColor)]">
+            <div class="container w-full grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- experience -->
+                 <div >
+                    <div class="flex items-center gap-3">
+                        <div class="text-2xl text-[var(--primaryColorLight)] md:text-3xl lg:text-4xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M12 7.00002C16.4183 7.00002 20 10.5817 20 15C20 19.4183 16.4183 23 12 23C7.58172 23 4 19.4183 4 15C4 10.5817 7.58172 7.00002 12 7.00002ZM12 
+                                10.5L10.6775 13.1797L7.72025 13.6094L9.86012 15.6953L9.35497 18.6406L12 17.25L14.645 18.6406L14.1399 15.6953L16.2798 
+                                13.6094L13.3225 13.1797L12 10.5ZM13 1.99902L18 2.00002V5.00002L16.6366 6.13758C15.5305 5.55773 14.3025 5.17887 
+                                13.0011 5.04951L13 1.99902ZM11 1.99902L10.9997 5.04943C9.6984 5.17866 8.47046 5.55738 7.36441 6.13706L6 5.00002V2.00002L11 1.99902Z"></path></svg>
+                        </div>
+
+                        <h2 class="subtitle">Experience</h2>
+                    </div>
+                    <div class="my-10 space-y-5 md:space-y-10">
+                        <!-- card 1 -->
+                         <div class="exp_card exp_card_edu bg-[var(--bodyColor)] p-5 rounded-2xl hover:bg-[var(--primaryColorLight)] duration-300">
+                            <p class="text-[var(--primaryColorLight)] text-sm font-bold pb-3">2022-present</p>
+                            <p class="text-xl font-bold uppercase lg:text-2xl xl:text-3xl">lead developer</p>
+                            <p>block,  london</p>
+                         </div>
+                         <!-- card 2 -->
+                         <div class="exp_card exp_card_edu bg-[var(--bodyColor)] p-5 rounded-2xl hover:bg-[var(--primaryColorLight)] duration-300">
+                            <p class="text-[var(--primaryColorLight)] text-sm font-bold pb-3">2022-present</p>
+                            <p class="text-xl font-bold uppercase lg:text-2xl xl:text-3xl">lead developer</p>
+                            <p>block,  london</p>
+                         </div>
+                         <!-- card 3 -->
+                         <div class="exp_card exp_card_edu bg-[var(--bodyColor)] p-5 rounded-2xl hover:bg-[var(--primaryColorLight)] duration-300">
+                            <p class="text-[var(--primaryColorLight)] text-sm font-bold pb-3">2022-present</p>
+                            <p class="text-xl font-bold uppercase lg:text-2xl xl:text-3xl">lead developer</p>
+                            <p>block,  london</p>
+                         </div>
+                         <!-- card 4 -->
+                         <div class="exp_card exp_card_edu bg-[var(--bodyColor)] p-5 rounded-2xl hover:bg-[var(--primaryColorLight)] duration-300">
+                            <p class="text-[var(--primaryColorLight)] text-sm font-bold pb-3">2022-present</p>
+                            <p class="text-xl font-bold uppercase lg:text-2xl xl:text-3xl">lead developer</p>
+                            <p>block,  london</p>
+                         </div>
+
+                    </div>
+                 </div>
+
+                 <!-- education -->
+                 <div >
+                    <div class="flex items-center gap-3">
+                        <div class="text-2xl text-[var(--primaryColorLight)] md:text-3xl lg:text-4xl">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M12 2 0 9 12 16 22 10.1667V17.5H24V9L12 2ZM3.99902 13.4905V18.0001C5.82344 20.429 8.72812
+                             22.0001 11.9998 22.0001 15.2714 22.0001 18.1761 20.429 20.0005 18.0001L20.0001 13.4913 12.0003 18.1579 3.99902 13.4905Z"></path></svg>
+                        </div>
+                        <h2 class="subtitle">Education</h2>
+                    </div>
+                    <div class="my-10 space-y-5 md:space-y-10">
+                        <!-- card 1 -->
+                         <div class="edu_card exp_card_edu bg-[var(--bodyColor)] p-5 rounded-2xl hover:bg-[var(--primaryColorLight)] duration-300">
+                            <p class="text-[var(--primaryColorLight)] text-sm font-bold pb-3">2022-present</p>
+                            <p class="text-xl font-bold uppercase lg:text-2xl xl:text-3xl">lead developer</p>
+                            <p>block,  london</p>
+                         </div>
+                         <!-- card 2 -->
+                         <div class="edu_card exp_card_edu bg-[var(--bodyColor)] p-5 rounded-2xl hover:bg-[var(--primaryColorLight)] duration-300">
+                            <p class="text-[var(--primaryColorLight)] text-sm font-bold pb-3">2022-present</p>
+                            <p class="text-xl font-bold uppercase lg:text-2xl xl:text-3xl">lead developer</p>
+                            <p>block,  london</p>
+                         </div>
+                         <!-- card 3 -->
+                         <div class="edu_card exp_card_edu bg-[var(--bodyColor)] p-5 rounded-2xl hover:bg-[var(--primaryColorLight)] duration-300">
+                            <p class="text-[var(--primaryColorLight)] text-sm font-bold pb-3">2022-present</p>
+                            <p class="text-xl font-bold uppercase lg:text-2xl xl:text-3xl">lead developer</p>
+                            <p>block,  london</p>
+                         </div>
+                         <!-- card 4 -->
+                         <div class="edu_card exp_card_edu bg-[var(--bodyColor)] p-5 rounded-2xl hover:bg-[var(--primaryColorLight)] duration-300">
+                            <p class="text-[var(--primaryColorLight)] text-sm font-bold pb-3">2022-present</p>
+                            <p class="text-xl font-bold uppercase lg:text-2xl xl:text-3xl">lead developer</p>
+                            <p>block,  london</p>
+                         </div>
+
+                    </div>
+                 </div>
+            </div>
+          </section>
+          <!-- my skill -->
+           <section class="container" id="skills">
+                <div class="flex flex-col items-center gap-5 text-center">
+                    <h2 class="subtitle">My skills</h2>
+                    <p class="max-w-2xl">
+                        Experienced and passionate web developer, i create innovative and effective web solution. 
+                        Explore my portofolio to discover my achievement.
+                    </p>
+                </div>
+                <!-- tailwind icon -->
+                 <div class="flex flex-wrap justify-center gap-5 md:gap-10 mt-10">
+                <div class="skills_card max-w-44 w-full">
+                    <div class="bg-[var(--darkSectionColor)] grid place-items-center text-center px-4 py-7 rounded-3xl space-y-5 grayscale-[85%] hover:grayscale-0 hover:bg-[var(--primaryColor)] 
+                    border border-transparent hover:bg-[(--primaryColorLight)] duration-300">
+                            <img src="./images/tail.svg" alt="logo tail" class="max-w-16">
+                            <p class="text-2xl text[var(--primaryColorLight)] font-bold">10%</p>
+                    </div>
+                    <p class="text-center text-[var(--primaryColorLight)] mt-3 capitalize">Tailwindcss</p>
+                </div>
+
+                <!-- tailwind icon -->
+                <div class="skills_card max-w-44 w-full">
+                    <div class="bg-[var(--darkSectionColor)] grid place-items-center text-center px-4 py-7 rounded-3xl space-y-5 grayscale-[85%] hover:grayscale-0 hover:bg-[var(--primaryColor)] 
+                    border border-transparent hover:bg-[(--primaryColorLight)] duration-300">
+                            <img src="./images/tail.svg" alt="logo tail" class="max-w-16">
+                            <p class="text-2xl text[var(--primaryColorLight)] font-bold">10%</p>
+                    </div>
+                    <p class="text-center text-[var(--primaryColorLight)] mt-3 capitalize">Tailwindcss</p>
+                </div>
+
+                <!-- tailwind icon -->
+                <div class="skills_card max-w-44 w-full">
+                    <div class="bg-[var(--darkSectionColor)] grid place-items-center text-center px-4 py-7 rounded-3xl space-y-5 grayscale-[85%] hover:grayscale-0 hover:bg-[var(--primaryColor)] 
+                    border border-transparent hover:bg-[(--primaryColorLight)] duration-300">
+                            <img src="./images/tail.svg" alt="logo tail" class="max-w-16">
+                            <p class="text-2xl text[var(--primaryColorLight)] font-bold">10%</p>
+                    </div>
+                    <p class="text-center text-[var(--primaryColorLight)] mt-3 capitalize">Tailwindcss</p>
+                </div>
+
+                <!-- tailwind icon -->
+                <div class="skills_card max-w-44 w-full">
+                    <div class="bg-[var(--darkSectionColor)] grid place-items-center text-center px-4 py-7 rounded-3xl space-y-5 grayscale-[85%] hover:grayscale-0 hover:bg-[var(--primaryColor)] 
+                    border border-transparent hover:bg-[(--primaryColorLight)] duration-300">
+                            <img src="./images/tail.svg" alt="logo tail" class="max-w-16">
+                            <p class="text-2xl text[var(--primaryColorLight)] font-bold">10%</p>
+                    </div>
+                    <p class="text-center text-[var(--primaryColorLight)] mt-3 capitalize">Tailwindcss</p>
+                </div>
+
+                <!-- tailwind icon -->
+                <div class="skills_card max-w-44 w-full">
+                    <div class="bg-[var(--darkSectionColor)] grid place-items-center text-center px-4 py-7 rounded-3xl space-y-5 grayscale-[85%] hover:grayscale-0 hover:bg-[var(--primaryColor)] 
+                    border border-transparent hover:bg-[(--primaryColorLight)] duration-300">
+                            <img src="./images/tail.svg" alt="logo tail" class="max-w-16">
+                            <p class="text-2xl text[var(--primaryColorLight)] font-bold">10%</p>
+                    </div>
+                    <p class="text-center text-[var(--primaryColorLight)] mt-3 capitalize">Tailwindcss</p>
+                </div>
+                <!-- tailwind icon -->
+                <div class="skills_card max-w-44 w-full">
+                    <div class="bg-[var(--darkSectionColor)] grid place-items-center text-center px-4 py-7 rounded-3xl space-y-5 grayscale-[85%] hover:grayscale-0 hover:bg-[var(--primaryColor)] 
+                    border border-transparent hover:bg-[(--primaryColorLight)] duration-300">
+                            <img src="./images/tail.svg" alt="logo tail" class="max-w-16">
+                            <p class="text-2xl text[var(--primaryColorLight)] font-bold">10%</p>
+                    </div>
+                    <p class="text-center text-[var(--primaryColorLight)] mt-3 capitalize">Tailwindcss</p>
+                </div>
+                </div>
+           </section>
+
+           <!-- contact -->
+            <section class="bg-[var(--darkSectionColor)]" id="contact">
+                <div class="container">
+                <div class="flex flex-col md:flex-row-reverse gap-16 md:gap-5 md:items-center">
+                    <!-- content -->
+                    <div class="flex-1 space-y-7 md:space-y-10 lg:pl-20 xl:pl-40">
+                        <div class="flex items-start gap-4">
+                            <div class="text-[var(--whiteColor)] bg-gradient-to-b from-[var(--primaryColor)] to-[var(--primaryColorLight)] h-10 w-10 lg:h-14 lg:w-14 rounded-full
+                            grid place-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                    <path d="M21 16.42V19.9561C21 20.4811 20.5941 20.9167 20.0705 20.9537C19.6331 20.9846 19.2763 21 19 21C10.1634 21 3 13.8366 3 5C3 
+                                    4.72371 3.01545 4.36687 3.04635 3.9295C3.08337 3.40588 3.51894 3 4.04386 3H7.5801C7.83678 3 8.05176 3.19442 8.07753 3.4498C8.10067 
+                                    3.67907 8.12218 3.86314 8.14207 4.00202C8.34435 5.41472 8.75753 6.75936 9.3487 8.00303C9.44359 8.20265 9.38171 8.44159 9.20185 8.57006L7.04355 
+                                    10.1118C8.35752 13.1811 10.8189 15.6425 13.8882 16.9565L15.4271 14.8019C15.5572 14.6199 15.799 14.5573 16.001 
+                                    14.6532C17.2446 15.2439 18.5891 15.6566 20.0016 15.8584C20.1396 15.8782 20.3225 15.8995 20.5502 15.9225C20.8056 15.9483 21 16.1633 21 16.42Z"></path></svg>
+                            </div>
+                            <div class="space-y-1">
+                                <p class="text-sm">Phone</p>
+                                <p class="font-bold hover:text-[var(--primaryColor)] duration-300 cursor-pointer">+237 657 71 37 26</p>
+                            </div>
+                        </div>
+
+                         <div class="flex items-start gap-4">
+                            <div class="text-[var(--whiteColor)] bg-gradient-to-b from-[var(--primaryColor)] to-[var(--primaryColorLight)] h-10 w-10 lg:h-14 lg:w-14 rounded-full
+                            grid place-items-center">
+                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                    <path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM12.0606 
+                                    11.6829L5.64722 6.2377L4.35278 7.7623L12.0731 14.3171L19.6544 7.75616L18.3456 6.24384L12.0606 11.6829Z"></path></svg>
+                            </div>
+                            <div class="space-y-1">
+                                <p class="text-sm">Email</p>
+                                <p class="font-bold hover:text-[var(--primaryColor)] duration-300 cursor-pointer">kevinbissouth@gmail.com</p>
+                            </div>
+                        </div>
+
+                         <div class="flex items-start gap-4">
+                            <div class="text-[var(--whiteColor)] bg-gradient-to-b from-[var(--primaryColor)] to-[var(--primaryColorLight)] h-10 w-10 lg:h-14 lg:w-14 rounded-full
+                            grid place-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                    <path d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 
+                                    13.8492 18.364 17.364ZM12 13C13.1046 13 14 12.1046 14 11C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11C10 12.1046 10.8954 13 12 13Z"></path></svg>
+                            </div>
+                            <div class="space-y-1">
+                                <p class="text-sm">Adress</p>
+                                <p class="font-bold hover:text-[var(--primaryColor)] duration-300 cursor-pointer">Oding chateau, <br>
+                                Ebolowa </p>
+                            </div>
+                        </div>
+
+                         
+                    </div>
+
+                    <!-- contact form -->
+                     <form class="flex-1 bg-[var(--primaryColor)] border border-[var(--primaryColor)] px-5 py-10 rounded-3xl space-y-3">
+                        <!-- subtitle & description -->
+                         <div class="flex flex-col">
+                            <h2 class="subtitle">Let's work together!</h2>
+                            <p class="max-w-2xl py-3">
+                                I create elegantly simple designs and code with passion. It's as straighforward as that! 
+                            </p>
+                         </div>
+
+                         <div class="space-y3 mt-7">
+                            <div class="flex flex-col md:flex-row items-center gap-3">
+                                <input type="text" placeholder="First name" name="firstname" autocomplete="off" class="">
+
+                                <input type="text" placeholder="Last name" name="lastname" autocomplete="off" class="">
+                            </div>
+                            <div class="flex flex-col md:flex-row items-center gap-3 mt-3">
+                                <input type="email" placeholder="Email address" name="email" autocomplete="off" class="">
+
+                                <input type="phone" placeholder="Phone number" name="phone" autocomplete="off" class="">
+                            </div>
+                         </div>
+                        <select>
+                            <option selected>Chose a service</option>
+                            <option value="branding">Branding Design</option>
+                            <option value="Web">web Design</option>
+                            <option value="UI">UI Design</option>
+                            <option value="App">App Design</option>
+                        </select>
+
+                        <div class="space-y-3">
+                            <textarea name="message" rows="5" placeholder="Message"></textarea>
+
+                            <button class="btn">
+                                <span class="z-10">send message</span>
+                            </button>
+                        </div>
+                     </form>
+                </div>
+                </div>
+            </section>
+    </main>
+    
+    <!-- footer -->
+     <footer id="footer" class="py-10 container flex flex-col items-center gap-5">
+
+            <div class="py-5">
+                <img src="./images/kblogo1.png" alt="footer logo" class="w-32">
+            </div>
+
+            <div>
+                <ul class="flex flex-wrap justify-center items-center space-x-3">
+                    <li>
+                        <a href="#quality_services" class="nav-link">Services</a>
+                    </li>
+                    <li>
+                        <a href="#recent_works" class="nav-link">Works</a>
+                    </li>
+                    <li>
+                        <a href="#exp_edu" class="nav-link">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li> 
+                </ul>
+            </div>
+
+            <div class="text-[var(--primaryColorLight)]">
+                <p>&copy; 2025 All rights reserved by <span class="font-bold">Kevin.B</span></p>
+            </div>
+     </footer>
+
+     <a href="#" id="scroll-up" class="fixed right-10 -bottom-1/2 bg-[var(--primaryColorLight)] px-4 py-2 rounded-full text-lg text-[var(--whiteColor)] z-50 hover:-translate-y-1
+     ease-in duration-200">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+            <path d="M460-200v-483.15L228.31-451.46 200-480l280-280 280 280-28.31 28.54L500-683.15V-200h-40Z"/></svg>
+     </a>
 </body>
 </html>

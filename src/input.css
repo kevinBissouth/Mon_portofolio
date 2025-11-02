@@ -16,7 +16,18 @@
     --bodyColor: hsl(216, 100%, 4%);
     --primaryColor: hsl(209, 87%, 21%);
     --primaryColorLight: hsl(209, 74%, 45%);
-    --whiteColor: #fff;
+    --whiteColor: #0a0a0a;
+    --textColor: #DDD;
+    --darkSectionColor: hsl(211, 100%, 12%);
+}
+@keyframes scaleAnimation{
+    50%{
+        transform: scale(1.1);
+    }
+}
+
+.animate-scaleAnimation {
+    animation: scaleAnimation 3s linear infinite;
 }
 
 @layer base {
@@ -25,10 +36,155 @@
     }
 
     body {
-        @apply text-[var(--primaryColor)] font-[Poppins] bg-[var(--bodyColor)] tracking-wider overflow-x-hidden;
+        @apply text-[var(--textColor)] font-[Poppins] bg-[var(--bodyColor)] tracking-wider overflow-x-hidden;
     }
     
     .container {
-        @apply p-[10px] md:p-[30px] 
+        @apply px-[10px] md:px-[30px] justify-self-center;
+    }
+
+    section {
+        @apply py-16 md:pt-28 md:pb-20;
+    }
+
+    input,
+    select,
+    textarea {
+        @apply w-full bg-[var(--bodyColor)] border border-gray-800 px-4 py-3 rounded-lg;
+
+    }
+
+    input:focus,
+    input:active,
+    select:focus,
+    select:active,
+    textarea:focus,
+    textarea:active {
+        @apply outline-none border-[var(--primaryColorLight)]
+    }
+
+    
+
+}
+
+@layer components {
+    .nav-link {
+        @apply relative font-bold;
+    }
+
+    .nav-link::before {
+        @apply content-[""] absolute w-full  h-[2px] bg-gradient-to-r from-[var(--primaryColorLight)] to-[var(--primaryColor)] -bottom-[5px] left-0 scale-x-0
+        transition-transform ease-in-out origin-right duration-500;
+    }
+
+    .active::before,
+    .nav-link:hover::before {
+        @apply scale-x-100 origin-left;
+    }
+
+    .btn {
+        @apply relative overflow-hidden bg-gradient-to-r from-[var(--primaryColorLight)] to-[var(--primaryColor)] text-[var(--whiteColor)] px-7 
+        py-3 rounded-full capitalize font-bold flex justify-center items-center;
+    }
+
+    .btn::before {
+        @apply content-[""] absolute w-[100%]  h-[100%] bg-gradient-to-r from-[var(--primaryColor)] to-[var(--primaryColorLight)] top-0 left-0 scale-x-0 rounded-full
+        transition-transform ease-in-out origin-right duration-300;
+    }
+
+    .btn:hover::before {
+        @apply scale-x-100 origin-left;
+    }   
+    
+    .btn_outline {
+        @apply border border-[var(--primaryColorLight)] text-[var(--primaryColorLight)] py-4 px-9 rounded-full hover:bg-[var(--primaryColorLight)] hover:text-[var(--whiteColor)]
+        duration-300;
+    }
+
+    .title, 
+    .subtitle{
+        @apply text-4xl lg:text-6xl xl:text-[65px] font-bold bg-gradient-to-r from-[var(--primaryColorLight)] to-[var(--whiteColor)] 
+        inline-block text-transparent bg-clip-text pb-2;
+    }
+
+    .subtitle{
+        @apply text-3xl md:text-4xl lg:text-5xl;
+    }
+
+}
+
+@layer utilities {
+    /* persone */
+    .social-icon {
+        @apply relative border border-[var(--primaryColorLight)] text-[var(--primaryColorLight)] h-8 w-10 rounded-full grid place-items-center
+        cursor-pointer hover:text-[var(--whiteColor)] duration-300 font-bold;
+    }
+
+     .social-icon::before {
+        @apply content-[''] absolute w-[100%] h-[100%] bg-[var(--primaryColorLight)] inset-0 rounded-full scale-0 transition-transform
+        ease-in-out duration-300 ;
+    }
+
+    .social-icon:hover::before {
+        @apply scale-100 origin-center;
+    } 
+    
+    /* My quality service  */
+    .service__item {
+        @apply  items-center px-4 pt-8 border-b border-[var(--primaryColorLight)] hover:bg-[var(--primaryColorLight)] cursor-pointer
+        duration-300;
+    }
+
+    .service__item div p {
+        @apply duration-300;
+    }
+
+    .service__item:hover div p {
+        @apply text-[var(--whiteColor)];
+    }
+
+    .service__item div svg {
+        @apply duration-300;
+    }
+
+    .service__item:hover div svg {
+        @apply -rotate-90;
+    }
+
+    /* my recent works */
+    .indicator {
+        transition: left 0.4s;
+    }
+
+    .work_card > div {
+        @apply duration-500;
+    }
+
+    .work_card:hover > div {
+        @apply bottom-0;
+    }
+
+    .work_card:hover div svg {
+        @apply -rotate-90;
+    }
+
+    /* experience and education */
+    .exp_card_edu,
+    .exp_card_edu > p {
+        @apply duration-300;
+    }
+
+    .exp_card_edu:hover,
+    .exp_card_edu:hover > p {
+        @apply text-[var(--whiteColor)];
+    }
+
+    /* my skills  */
+    .skills_card img {
+        @apply duration-300;
+    }
+
+    .skills_card:hover img {
+        @apply scale-110;
     }
 }
