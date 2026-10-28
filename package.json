@@ -4,6 +4,8 @@
   "description": "My personal portofolio website built using HTML, Tailwindcss and javascript.",
   "main": "index.js",
   "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./src/output.css --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/kevinBissouth/Mon_portofolio/issues"
   },
-  "homepage": "https://github.com/kevinBissouth/Mon_portofolio#readme"
+  "homepage": "https://github.com/kevinBissouth/Mon_portofolio#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.14",
+    "tailwindcss": "^4.1.14"
+  }
 }
